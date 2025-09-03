@@ -27,7 +27,7 @@ const eventsToWatch: EventConfig[] = [
 //
 export function useAppContractEvents() {
   const eventResults = eventsToWatch.map((e) =>
-    useWatchContractEvents({
+    useWatchContractEvent({
       address: e.contract.address,
       abi: e.contract.abi,
       chainId: e.contract.chainId,
