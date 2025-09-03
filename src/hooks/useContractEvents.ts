@@ -32,7 +32,7 @@ export function useAppContractEvents() {
       abi: e.contract.abi,
       chainId: e.contract.chainId,
       eventName: e.eventName as any, // forzamos a any porque wagmi no infiere bien de arrays dinámicos
-      onlogs: (logs) => {
+      onLogs: (logs) => {
         console.log(`📡 Evento ${e.eventName} detectado en ${e.contract.address}`);
         console.log("Event Logs:", logs);
       },
