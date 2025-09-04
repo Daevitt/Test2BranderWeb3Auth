@@ -36,3 +36,12 @@ export const contracts = {
 } as const;
 
 export type ContractName = keyof typeof contracts;
+
+export interface ContractConfig {
+  address: string;
+  abi: any[];
+}
+
+export type ContractsType = {
+  [K in ContractName]: ContractConfig;
+};
